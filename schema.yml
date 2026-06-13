@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: fct_claims_paid
+    description: >
+      Fact table for finalized paid claims. One row per claim payment event.
+      Used by AP for payment reconciliation and by actuarial for loss ratio calculations.
+      Excludes denied, pending, and voided claims.
+    columns:
+      - name: claim_id
+        description: Unique identifier for the claim.
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: Member who filed the claim.
+        tests:
+          - not_null
+
+      - name: provider_id
+        description: Accredited provider who rendered the service.
+
+      - name: service_date
+        description: Date the medical service was rendered.
+
+      - name: payment_date
+        description: Date the claim was paid out to the provider.
+
+      - name: claim_amount_php
+        description: Gross claim amount in Philippine Peso before deductions.
+
+      - name: deductible_amount_php
+        description: Deductible applied to the claim in Philippine Peso.
+
+      - name: net_paid_amount_php
+        description: Final amount paid to the provider after deductions.
+
+      - name: diagnosis_code
+        description: ICD-10 diagnosis code associated with the claim.
+
+      - name: claim_type
+        description: "Type of claim: inpatient, outpatient, or pharmacy."
+
+      - name: provider_name
+        description: Name of the accredited provider.
+
+      - name: provider_type
+        description: "Provider classification: hospital, clinic, or pharmacy."
+
+      - name: region
+        description: Philippine region where the provider is located.
+
+      - name: plan_code
+        description: HMO plan the member is enrolled in.
+
+      - name: group_id
+        description: Corporate group the member belongs to.
+
+      - name: corporate_account
+        description: Corporate account name tied to the member's group.
