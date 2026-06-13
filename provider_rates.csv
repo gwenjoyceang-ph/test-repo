@@ -1,0 +1,5 @@
+rate_tier,capitation_rate_php,tier_description
+tier_1,850.00,Primary care clinics - basic coverage
+tier_2,1200.00,Secondary hospitals - standard coverage
+tier_3,1800.00,Tertiary hospitals - full coverage
+tier_4,2400.00,Specialty centers - extended coverage
