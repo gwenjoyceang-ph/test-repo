@@ -1,0 +1,5 @@
+version: 2
+
+models:
+  - name: int_claims_enriched
+    description: "Claims joined with member and availment data for downstream marts."

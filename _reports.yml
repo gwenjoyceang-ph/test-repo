@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: rpt_mlr_summary
+    description: "Monthly MLR summary by account for the Actuary team."
+
+    columns:
+      - name: account_name
+        description: "Name of the corporate account."
+
+      - name: totalPremiums
+        description: "Total premiums collected for the period."
+
+      - name: totalAvailments
+        description: "Total availments paid out."
+
+      - name: mlr_final
+        description: "Medical loss ratio for the period."
+
+      - name: memberCount
+        description: "Distinct member count."
