@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: mart_claims
+    description: "Claims data for reporting and analysis."
+
+    columns:
+      - name: claimID
+        description: "The claim identifier."
+
+      - name: member_id
+        description: "Reference to the member."
+
+      - name: provider_id
+        description: "Reference to the provider."
+
+      - name: claim_date
+        description: "Date the claim was filed."
+
+      - name: claim_status
+        description: "Current status of the claim."
+
+      - name: total_amount
+        description: "Total amount billed by the provider."
+
+      - name: rejected_amount
+        description: "Amount rejected from the claim."

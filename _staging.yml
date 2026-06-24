@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_availments
+    description: "Raw availments pulled from the source system."
+
+    columns:
+      - name: availmentID
+        description: "Availment identifier."
+
+      - name: memberID
+        description: "Member reference."
+
+      - name: providerID
+        description: "Provider reference."
+
+      - name: availment_date
+        description: "Date of availment."
+
+      - name: avail_type
+        description: "Type of availment (e.g. inpatient, outpatient)."
+
+      - name: amount_billed
+        description: "Amount billed by provider."
+
+      - name: approved
+        description: "Whether the availment was approved."
+
+      - name: created
+        description: "Record creation time."
